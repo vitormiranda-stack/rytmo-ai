@@ -10,10 +10,16 @@ const tarefa: Tarefa[] = [
     {titulo: 'Fazer exercícios de cardio', duracao: 45, concluida: false}
 ];
 
+function concluirTarefa(indice: number) : void {
+    const tarefaSelecionada = tarefa[indice];
 
-if (tarefa[0] !== undefined) {
-    tarefa[0].concluida = true;
+    if (tarefaSelecionada !== undefined) {
+        tarefaSelecionada.concluida = true;
+    }
 }
+
+concluirTarefa(2);
+
 
 for( let i = 0; i < tarefa.length; i++) {
 
