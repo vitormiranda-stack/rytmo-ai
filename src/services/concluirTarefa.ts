@@ -1,4 +1,4 @@
-import  {tarefa} from "../datas/tarefas.js"
+import  {tarefa} from "../datas/tarefas.js";
 
 export function concluirTarefa(indice: number) : boolean {
     const tarefaSelecionada = tarefa[indice];
@@ -6,7 +6,7 @@ export function concluirTarefa(indice: number) : boolean {
     if (tarefaSelecionada !== undefined) {
         tarefaSelecionada.concluida = true;
         return true;
-    }
+    };
 
     return false;
 }
