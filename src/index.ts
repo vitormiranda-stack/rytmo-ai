@@ -1,25 +1,7 @@
-interface Tarefa {
-    titulo: string;
-    duracao: number;
-    concluida: boolean;
-}
+import  {tarefa} from "./datas/tarefas.js"
+import {concluirTarefa} from "./services/concluirTarefa.js"
 
-const tarefa: Tarefa[] = [
-    {titulo: 'Estudar calculo', duracao : 60, concluida : false},
-    {titulo: 'treinar musculação', duracao: 90, concluida: false},
-    {titulo: 'Fazer exercícios de cardio', duracao: 45, concluida: false}
-];
 
-function concluirTarefa(indice: number) : boolean {
-    const tarefaSelecionada = tarefa[indice];
-
-    if (tarefaSelecionada !== undefined) {
-        tarefaSelecionada.concluida = true;
-        return true;
-    }
-
-    return false;
-}
 
 console.log(concluirTarefa(2));
 console.log(concluirTarefa(50));
