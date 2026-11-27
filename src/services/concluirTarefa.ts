@@ -1,12 +1,17 @@
 import  {tarefa} from "../datas/tarefas.js";
 
-export function concluirTarefa(indice: number) : boolean {
-    const tarefaSelecionada = tarefa[indice];
+export function concluirTarefa(id: number) : boolean {
+    
 
-    if (tarefaSelecionada !== undefined) {
-        tarefaSelecionada.concluida = true;
-        return true;
+    for(let i=0; i < tarefa.length; i++){
+
+        const tarefaAtual = tarefa[i];
+
+        if (tarefaAtual !== undefined && tarefaAtual.id === id) {
+            tarefaAtual.concluida = true;
+            return true;
     };
+    }
 
     return false;
 }

@@ -9,6 +9,7 @@ export function listarTarefa() : void{
     console.log(tarefaAtual.titulo);
     console.log(tarefaAtual.duracao);
     console.log(tarefaAtual.concluida);
+    console.log(tarefaAtual.id);
 
     }
 }
